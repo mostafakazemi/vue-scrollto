@@ -23,6 +23,7 @@ let defaults = {
   onCancel: false,
   x: false,
   y: true,
+  rtl: false,
 }
 
 export function setDefaults(options) {
@@ -143,6 +144,14 @@ export const scroller = () => {
     }
 
     container = _.$(options.container || defaults.container)
+
+    let rtl = options.rtl || defaults.rtl
+    if (rtl) {
+      let childrens = [].slice.call(container.children)
+      let index = Array.prototype.indexOf.call(childrens.reverse(), element)
+      element = childrens.reverse()[index]
+    }
+
     duration = options.duration || defaults.duration
     easing = options.easing || defaults.easing
     offset = options.hasOwnProperty('offset') ? options.offset : defaults.offset
@@ -170,8 +179,10 @@ export const scroller = () => {
       cumulativeOffsetElement.top - cumulativeOffsetContainer.top + offset
 
     initialX = scrollLeft(container)
+
     targetX =
       cumulativeOffsetElement.left - cumulativeOffsetContainer.left + offset
+    if (rtl) targetX *= -1
 
     abort = false
 
