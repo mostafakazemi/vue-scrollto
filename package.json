@@ -1,6 +1,6 @@
 {
-  "name": "vue-scrollto",
-  "version": "0.0.0-development",
+  "name": "@mosikd/vue-scrollto",
+  "version": "0.0.1",
   "description": "Adds a directive that listens for click events and scrolls to elements.",
   "main": "vue-scrollto.js",
   "types": "vue-scrollto.d.ts",
@@ -13,15 +13,10 @@
     "scroll to"
   ],
   "license": "MIT",
-  "author": {
-    "name": "Igor Randjelovic",
-    "email": "shout@igor-randjelovic.com",
-    "url": "http://igor-randjelovic.com",
-    "twitter": "https://twitter.com/igor_randj"
-  },
+  "author": "Igor Randjelovic <shout@igor-randjelovic.com> (http://igor-randjelovic.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rigor789/vue-scrollto"
+    "url": "git+https://github.com/mostafakazemi/vue-scrollto.git"
   },
   "dependencies": {
     "bezier-easing": "2.1.0"
@@ -90,5 +85,12 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/rigor789/vue-scrollto/issues"
+  },
+  "homepage": "https://github.com/rigor789/vue-scrollto#readme",
+  "directories": {
+    "doc": "docs"
   }
 }
