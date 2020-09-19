@@ -1,3 +1,4 @@
+
 ---
 sidebar: auto
 ---
@@ -238,6 +239,11 @@ Whether or not we want scrolling on the `x` axis
 Whether or not we want scrolling on the `y` axis
  
 *Default:* `true`
+
+#### rtl 
+The rtl to be used when the `container` direction is right-to-left
+ 
+*Default:* `false`
 
 
 <h2 id="easing-detailed">Easing</h2>
