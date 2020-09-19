@@ -174,6 +174,8 @@ export const scroller = () => {
 
     if (typeof offset === 'function') {
       offset = offset(element, container)
+    } else if (typeof offset === 'string' && offset === 'center') {
+      offset = -(container.offsetWidth - element.offsetWidth) / 2
     }
 
     initialY = scrollTop(container)
